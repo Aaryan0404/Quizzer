@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Answer History
+{% endblock %}
+
+{% block main %}
+    <h2>Below, you can find a summary of all the answer-attempts for all the questions you have created.</h2>
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Question-ID</th>
+                <th scope="col">Question</th>
+                <th scope="col">Input-Answer</th>
+                <th scope="col">Correct-Answer</th>
+                <th scope="col">Username</th>
+                <th scope="col">Attempt-Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dh in dhs %}
+            <tr>
+                <td scope="row">{{ question_ids[dh] }}</td>
+                <td>{{ questions[dh] }}</td>
+                <td>{{ ias[dh] }}</td>
+                <td>{{ cas[dh] }}</td>
+                <td>{{ aus[dh] }}</td>
+                <td>{{ ts[dh] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

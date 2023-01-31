@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Choose Question Type
+{% endblock %}
+
+{% block main %}
+    <form action="/creatorhelper" method="post">
+        <div class="form-group">
+            <title class="form-control">Would you like to create an independent question, or would you like to add a question to an already existing test?</title>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="haha" placeholder="INDEPENDENT or TEST" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Enter</button>
+    </form>
+{% endblock %}
+
+
+

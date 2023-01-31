@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Question
+{% endblock %}
+
+{% block main %}
+    <form action="/createquestion" method="post">
+        <div class="form-group">
+            <p class="form-group">Enter the same test ID as the one for previous question(s)</p>
+            <input autocomplete="off" autofocus class="form-control" name="test_id" placeholder="Copy ID above OR paste previously used ID" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="question" placeholder="Question" type="text">
+        </div>
+        <div class="form-group">
+            <title class="form-control">A</title>
+            <input class="form-control" name="answer1" placeholder="Answer Choice 1" type="text">
+        </div>
+        <div class="form-group">
+            <title class="form-control">B</title>
+            <input class="form-control" name="answer2" placeholder="Answer Choice 2" type="text">
+        </div>
+        <div class="form-group">
+            <title class="form-control">C</title>
+            <input class="form-control" name="answer3" placeholder="Answer Choice 3" type="text">
+        </div>
+        <div class="form-group">
+            <title class="form-control">D</title>
+            <input class="form-control" name="answer4" placeholder="Answer Choice 4" type="text">
+        </div>
+        <div class="form-group">
+            <title class="form-control">Correct Answer</title>
+            <input class="form-control" name="ca" placeholder="A, B, C, OR D" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Create</button>
+    </form>
+{% endblock %}
